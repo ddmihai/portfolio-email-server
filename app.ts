@@ -12,7 +12,7 @@ app.use(cors({
 }));
 
 
-// Use rate limit to minimise the number of the requests
+// Use rate limit to minimise the number of the requestssss
 const apiLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 15,
