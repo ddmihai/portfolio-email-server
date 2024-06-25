@@ -5,10 +5,11 @@ import cors from 'cors';
 import emailRouter from "./src/routes/emails.routes";
 
 
+// Added cors
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: 'http://localhost:3333'
+    origin: process.env.NODE_ENV === 'production' ? 'https://daniel-web-dev.netlify.app' : 'http://localhost:3333'
 }));
 
 
